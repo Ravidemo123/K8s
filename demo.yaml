@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: javawebapppod
+spec:
+  containers:
+   - name:  javawebapp
+     image: ashokit/javawebapp
+     ports:
+    - containerPort: 8080
+---
+apiVersion: V1
+kind: Pod
+metadata:
+  name: spc
+spec:
+  containers:
+    - name: spcdemo
+      image: manugatla/spring-petclinic
+      ports:
+    - containerPort: 8080
